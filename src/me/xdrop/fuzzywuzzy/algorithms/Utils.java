@@ -29,16 +29,13 @@ final public class Utils {
         final StringBuilder buf = new StringBuilder(strings.size() * 16);
 
         for(int i = 0; i < strings.size(); i++){
-
-            if(i < strings.size()) {
+            buf.append(strings.get(i));
+            if(i < strings.size() - 1) {
                 buf.append(sep);
             }
-
-            buf.append(strings.get(i));
-
         }
 
-        return buf.toString().trim();
+        return buf.toString();
     }
 
     static String sortAndJoin(Set<String> col, String sep){
